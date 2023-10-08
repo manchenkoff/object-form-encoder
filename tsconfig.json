@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "declaration": true,
+        "outDir": "dist",
+        "strict": true,
+        "esModuleInterop": true
+    },
+    "include": [
+        "src/**/*",
+        "tests/index.test.ts",
+        "tests/normalizers/scalar.test.ts",
+        "tests/normalizers/object.test.ts"
+    ],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

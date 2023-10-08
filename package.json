@@ -1,0 +1,42 @@
+{
+    "name": "object-form-encoder",
+    "version": "0.0.1",
+    "description": "Utility to normalize and convert objects into FormData",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest",
+        "fmt": "prettier --write .",
+        "lint": "eslint --fix ."
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/manchenkoff/object-form-encoder.git"
+    },
+    "keywords": [
+        "formdata",
+        "object",
+        "serialize",
+        "json",
+        "form"
+    ],
+    "type": "module",
+    "author": "Artem Manchenkov <artem@manchenkoff.me>",
+    "license": "MIT",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.7.4",
+        "@typescript-eslint/parser": "^6.7.4",
+        "eslint": "^8.51.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "jsdom": "^22.1.0",
+        "prettier": "^3.0.3",
+        "typescript": "^5.2.2",
+        "vitest": "^0.34.6"
+    },
+    "packageManager": "yarn@3.6.4"
+}
