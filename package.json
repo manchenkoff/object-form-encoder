@@ -6,7 +6,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "test": "vitest",
+        "test": "vitest run",
+        "test:watch": "vitest watch",
         "fmt": "prettier --write .",
         "lint": "eslint --fix .",
         "release": "yarn lint && yarn test && yarn build && npm publish && git push --follow-tags"
