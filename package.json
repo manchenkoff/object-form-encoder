@@ -1,11 +1,19 @@
 {
     "name": "object-form-encoder",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Utility to normalize and convert objects into FormData",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "type": "module",
+    "main": "dist/object-form-encoder.umd.cjs",
+    "module": "dist/object-form-encoder.js",
+    "types": "dist/src/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/object-form-encoder.js",
+            "require": "./dist/object-form-encoder.umd.cjs"
+        }
+    },
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && vite build",
         "test": "vitest run",
         "test:watch": "vitest watch",
         "fmt": "prettier --write .",
@@ -37,6 +45,8 @@
         "jsdom": "^22.1.0",
         "prettier": "^3.0.3",
         "typescript": "^5.2.2",
+        "vite": "^4.5.0",
+        "vite-plugin-dts": "^3.6.0",
         "vitest": "^0.34.6"
     },
     "packageManager": "yarn@3.6.4"
