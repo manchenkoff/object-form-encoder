@@ -26,7 +26,6 @@
         "json",
         "form"
     ],
-    "type": "module",
     "author": "Artem Manchenkov <artem@manchenkoff.me>",
     "license": "MIT",
     "devDependencies": {
