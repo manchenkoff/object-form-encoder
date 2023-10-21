@@ -1,16 +1,17 @@
-// vite.config.ts
-import { resolve } from 'path';
-import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import path from 'path';
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/guide/build.html#library-mode
 export default defineConfig({
+    base: './',
+    plugins: [dts({ rollupTypes: true })],
     build: {
+        sourcemap: true,
         lib: {
-            entry: resolve(__dirname, 'src/index.ts'),
-            name: 'object-form-encoder',
-            fileName: 'object-form-encoder',
+            entry: path.resolve(__dirname, 'src/index.ts'),
+            name: 'mylib',
+            formats: ['es', 'cjs', 'umd', 'iife'],
+            fileName: (format) => `index.${format}.js`,
         },
     },
-    plugins: [dts()],
 });

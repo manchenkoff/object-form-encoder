@@ -1,6 +1,6 @@
 {
     "name": "object-form-encoder",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Utility to normalize and convert objects into FormData",
     "author": "Artem Manchenkov <artem@manchenkoff.me>",
     "license": "MIT",
@@ -11,16 +11,12 @@
         "json",
         "form"
     ],
-    "type": "module",
-    "main": "./dist/object-form-encoder.umd.cjs",
-    "module": "./dist/object-form-encoder.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/object-form-encoder.js",
-            "require": "./dist/object-form-encoder.umd.cjs"
-        }
-    },
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.es.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "tsc && vite build",
         "test": "vitest run",
