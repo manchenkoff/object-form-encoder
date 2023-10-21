@@ -10,6 +10,15 @@ test('object should be converted to form data', () => {
     expect(objectToFormData(payload)).toEqual(expected);
 });
 
+test('object should be converted to form data w/o undefined', () => {
+    const payload = { foo: 'bar', bar: undefined };
+
+    const expected = new FormData();
+    expected.append('foo', 'bar');
+
+    expect(objectToFormData(payload)).toEqual(expected);
+});
+
 test('complex object should be converted to form data', () => {
     const file1 = new File(['foo'], 'foo.txt');
     const file2 = new File(['bar'], 'bar.txt');

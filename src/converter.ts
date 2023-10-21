@@ -11,7 +11,7 @@ export default class ObjectConverter implements Converter {
         let formData = new FormData();
 
         for (const key in value) {
-            if (!value.hasOwnProperty(key)) {
+            if (!value.hasOwnProperty(key) || value[key] === undefined) {
                 continue;
             }
 

@@ -1,6 +1,6 @@
 {
     "name": "object-form-encoder",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Utility to normalize and convert objects into FormData",
     "author": "Artem Manchenkov <artem@manchenkoff.me>",
     "license": "MIT",
