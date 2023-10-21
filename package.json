@@ -1,11 +1,20 @@
 {
     "name": "object-form-encoder",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Utility to normalize and convert objects into FormData",
+    "author": "Artem Manchenkov <artem@manchenkoff.me>",
+    "license": "MIT",
+    "keywords": [
+        "formdata",
+        "object",
+        "serialize",
+        "json",
+        "form"
+    ],
     "type": "module",
-    "main": "dist/object-form-encoder.umd.cjs",
-    "module": "dist/object-form-encoder.js",
-    "types": "dist/src/index.d.ts",
+    "main": "./dist/object-form-encoder.umd.cjs",
+    "module": "./dist/object-form-encoder.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
             "import": "./dist/object-form-encoder.js",
@@ -20,23 +29,12 @@
         "lint": "eslint --fix .",
         "release": "yarn lint && yarn test && yarn build && npm publish && git push --follow-tags"
     },
-    "files": [
-        "dist"
-    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/manchenkoff/object-form-encoder.git"
     },
-    "keywords": [
-        "formdata",
-        "object",
-        "serialize",
-        "json",
-        "form"
-    ],
-    "author": "Artem Manchenkov <artem@manchenkoff.me>",
-    "license": "MIT",
     "devDependencies": {
+        "@types/node": "^20.8.7",
         "@typescript-eslint/eslint-plugin": "^6.7.4",
         "@typescript-eslint/parser": "^6.7.4",
         "eslint": "^8.51.0",
